@@ -6,4 +6,7 @@ class Triangle
    @arg2 = arg2
    @arg3 = arg3
  end
+ 
+ def kind
+   
 end
