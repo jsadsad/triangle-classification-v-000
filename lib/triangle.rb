@@ -7,14 +7,14 @@ class Triangle
    @arg3 = arg3
  end
  
- def kind
-  true_triangle
-  if arg1 == arg2 && arg2 == arg3
-    :equilateral
-  elsif arg1 == arg2 || arg2 == arg3 || arg1 == arg3
-    :isosceles
-  else
-    :scalene
+  def kind
+    true_triangle
+    if arg1 == arg2 && arg2 == arg3
+      :equilateral
+    elsif arg1 == arg2 || arg2 == arg3 || arg1 == arg3
+      :isosceles
+    else
+      :scalene
   end
   
   class TriangleError < StandardError
