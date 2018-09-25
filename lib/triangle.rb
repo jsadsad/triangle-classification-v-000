@@ -10,7 +10,7 @@ class Triangle
  def kind
   if arg1 == b && b == c
     :equilateral
-  elsif a == b || b == c || a == c
+  elsif arg1 == b || b == c || arg1 == c
     :isosceles
   else
     :scalene
@@ -20,7 +20,7 @@ class Triangle
   end
   
   def validate_triangle
-    real_triangle = [(a + b > c), (a + c > b), (b + c > a)]
+    real_triangle = [(arg1 + b > c), (arg1 + c > b), (b + c > arg1)]
     [a, b, c].each { |s| real_triangle << false if s <= 0 }
     raise TriangleError if real_triangle.include?(false)
   end
